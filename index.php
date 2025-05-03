@@ -9,7 +9,7 @@ if(isset($_SESSION['logged_in'])){
 <head>
   <meta charset="UTF-8">
   <title>Lost and Found CvSU Naic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Luckiest+Guy&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     * {
@@ -83,15 +83,16 @@ if(isset($_SESSION['logged_in'])){
       .nav-links a {
         margin: 5px 0;
       }
+
+    
     }
 
     .main-container {
       flex: 1;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: flex-start;
-      padding-left: 120px;
-      padding-top: 40px;
+      padding: 40px 120px 0 120px;
     }
 
     .typing-box {
@@ -129,7 +130,7 @@ if(isset($_SESSION['logged_in'])){
     }
 
     .tagline1 {
-     margin-bottom: 10px;
+      margin-bottom: 10px;
       font-size: 1.65rem;
       font-weight: 600;
       font-style: italic;
@@ -146,7 +147,7 @@ if(isset($_SESSION['logged_in'])){
       margin-top: 10px;
       margin-left: 60px;
       padding: 14px 34px;
-      background: linear-gradient(to right, #3b82f6, #2563eb);
+      background: linear-gradient(to right, #3b82f6, #1a47aa);
       color: white;
       font-weight: 700;
       font-size: 1rem;
@@ -163,6 +164,14 @@ if(isset($_SESSION['logged_in'])){
       box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
       background: linear-gradient(to right, #2563eb, #1d4ed8);
     }
+
+    .right-aligned-text {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.5rem;
+      color: #ffffff;
+      align-self: flex-start;
+      padding-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -170,11 +179,10 @@ if(isset($_SESSION['logged_in'])){
   <header>
     <div class="navbar-title">
       <img src="images/logo.png" alt="CvSU Logo">
-      <span><strong style="display: block; font-size: 1.8rem;">CvSU</strong><span style="display: block; font-size: 1.1rem;">NAIC</span></span>
+      <span><strong style="display: block; font-size: 1.8rem;">Lost and Found</strong><span style="display: block; font-size: 1.1rem;">CvSU NAIC</span></span>
     </div>
     <nav class="nav-links">
       <a href="login.html">FAQ</a>
-     
     </nav>
   </header>
 
@@ -184,13 +192,15 @@ if(isset($_SESSION['logged_in'])){
         <span>Looking For</span>
         <span>Something?</span>
       </h1>
-      <p class="tagline">Every lost item has a story.</p>
-      <p class="tagline1">Help us complete it.</p>
+      <p class="tagline">Lost something? </p>
+      <p class="tagline1">Let the campus help you get it back.</p>
       <a href="login.html">
         <button class="login-button">Log in</button>
       </a>
     </div>
+   
   </div>
+
   <script>
     const phrases = [
       ["Looking For", "Something?"],
@@ -221,6 +231,5 @@ if(isset($_SESSION['logged_in'])){
     setInterval(updateTypingText, 2800);
   </script>
   
-
 </body>
 </html>
